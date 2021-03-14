@@ -79,6 +79,7 @@ public class Json {
         String s = httpRequest("https://gw.tvs.qq.com/echo?msg=abc123xyz");
         log.debug(s);
         printf(JSON.parseObject(s));
+        // linux 下: sed -i 's/[0-9]/-/g' file.json
         tran(s, "file.json");
     }
 }
